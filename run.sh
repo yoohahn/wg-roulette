@@ -25,7 +25,7 @@ killCurrentAndPickANewConfig() {
   RANDOM_CONFIG=$(ls $WG_CONFIG_FOLDER | shuf -n 1)
   cp $WG_CONFIG_FOLDER/$RANDOM_CONFIG $WG_LOCATION
   sleep 1
-  wg-quick up $WG_INTERFACE >> /var/log/wg-extra.log
+  wg-quick up $WG_INTERFACE
   sleep 2
 }
 
